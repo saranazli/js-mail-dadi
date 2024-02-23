@@ -22,6 +22,38 @@
 6 stampo l'esito della condizione che si verifica relativa alla ail inserita
 */
 
+const mailList = ['pina@live.it', 'stella@live.it', 'gio@live.it', 'stello@live.it'];
+
+const userMail = prompt ('inserisci la tua E-mail');
+
+
+for (let i = 0; i > mailList.length; i++){
+
+  const mailConfront = mailList.at();
+
+  if (mailConfront = userMail)[
+    console.log(userMail)
+  ];
+};
+
+console.log(mailList);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // esercizio Dadi
 
 /*
@@ -31,3 +63,5 @@
 3 stessa cosa per una variabile che sarà il computer
 4 creo un istruzione condizionale in cui confronto i numeri dati
 5 il valore più alto sarà la mia variabile vincitrice
+
+*/
