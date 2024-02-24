@@ -22,23 +22,29 @@
 6 stampo l'esito della condizione che si verifica relativa alla ail inserita
 */
 
-const mailList = ['pina@live.it', 'stella@live.it', 'gio@live.it', 'stello@live.it'];
+let mailList = ['pina@live.it', 'stella@live.it', 'gio@live.it', 'stello@live.it'];
 
-const userMail = prompt ('inserisci la tua E-mail');
+let userMail = prompt ('inserisci la tua E-mail');
 
+let message = (' ');
 
-for (let i = 0; i > mailList.length; i++){
+for (let i = 0; i = mailList.length; i++){
+  
+  if (userMail === mailList[i]){
 
-  const mailConfront = mailList.at();
+    message = (userMail + ' accedi pure ')
 
-  if (mailConfront = userMail)[
-    console.log(userMail)
-  ];
+    console.log(message)
+    console.log(i)
+
+  } else {
+
+    message = (userMail + ' sbagliato ');
+
+  }
 };
 
-console.log(mailList);
-
-
+document.querySelector('h1').innerHTML = `${message}`;
 
 
 
