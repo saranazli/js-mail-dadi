@@ -48,7 +48,10 @@ for (let i = 0; i = mailList.length; i++){
 
 document.querySelector('h1').innerHTML = `${message}`; */
 
-// esercizio Dadi
+
+
+
+// ESERCIZIO DADI 
 
 /*
 
@@ -74,7 +77,12 @@ for (let i = 0; i < 1; i++){
 
   const numeroRandomPc = Math.ceil(Math.random() * 100 );
 
-  console.log(numeroRandomPc); 
+  console.log(numeroRandomPc);
+  
+  document.querySelector('.random-numbers').innerHTML =
+  `
+  ${ ' il giocatore ha estratto ' + numeroRandomUser + ' il pc ha estratto ' + numeroRandomPc }
+  `;
 
   if ( numeroRandomPc < numeroRandomUser){
 
@@ -89,4 +97,8 @@ for (let i = 0; i < 1; i++){
 
 console.log(messageNum);
 
-document.getElementById('dadi').innerHTML = `${messageNum}`;
+document.getElementById('dadi').innerHTML = `
+${messageNum}
+`;
+
+
