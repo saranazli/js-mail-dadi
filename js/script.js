@@ -1,17 +1,6 @@
 
 
-/* 
-1 Mail
-  Chiedi all’utente la sua email,
-  controlla che sia nella lista di chi può accedere,
-  stampa un messaggio appropriato sull’esito del controllo.
-
-2  Gioco dei dadi
-  Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
-  Stabilire il vincitore, in base a chi fa il punteggio più alto.
-*/
-
-// esercizio Mail
+// ESERCIZIO MAIL
 
 /*
 1 con prompt chiedo la mail dell'utente
@@ -22,34 +11,29 @@
 6 stampo l'esito della condizione che si verifica relativa alla ail inserita
 */
 
-/*
 
-let mailList = ['pina@live.it', 'stella@live.it', 'gio@live.it', 'stello@live.it'];
+const mailList = [ 'pina@live.it', 'stella@live.it', 'gio@live.it', 'stello@live.it'];
 
-let userMail = prompt ('inserisci la tua E-mail');
+const userMail = prompt ('inserisci la tua E-mail');
 
-let message = (' ');
+let message = ' accesso negato ' ;
 
-for (let i = 0; i = mailList.length; i++){
+for ( let i = 0; i <= mailList.length; i++ ) {
+
+  if ( userMail === mailList[i] ) {
   
-  if (userMail === mailList[i]){
-
-    message = (userMail + ' accedi pure ');
+    message = userMail + ' accesso consentito ' ;
 
     console.log(message);
     console.log(i);
-
-  } else {
-
-    message = (userMail + ' sbagliato ');
-
+    
+    document.getElementById('mail-yes').innerHTML = `${message}`;
+    
   };
+  
 };
 
-document.querySelector('h1').innerHTML = `${message}`; */
-
-
-
+document.getElementById('mail-yes').innerHTML = `${message}`;
 
 // ESERCIZIO DADI 
 
@@ -61,9 +45,10 @@ document.querySelector('h1').innerHTML = `${message}`; */
 4 creo un istruzione condizionale in cui confronto i numeri dati
 5 il valore più alto sarà la mia variabile vincitrice
 
-*/
+/*
 
 /*Math.ceil(Math.random() * 100 )*/
+
 
 const numeroVincente = [];
 
@@ -100,5 +85,3 @@ console.log(messageNum);
 document.getElementById('dadi').innerHTML = `
 ${messageNum}
 `;
-
-
