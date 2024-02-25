@@ -16,7 +16,7 @@ const mailList = [ 'pina@live.it', 'stella@live.it', 'gio@live.it', 'stello@live
 
 const userMail = prompt ('inserisci la tua E-mail');
 
-let message = ' accesso negato ' ;
+let message = userMail + ' accesso negato ' ;
 
 for ( let i = 0; i <= mailList.length; i++ ) {
 
@@ -37,18 +37,6 @@ document.getElementById('mail-yes').innerHTML = `${message}`;
 
 // ESERCIZIO DADI 
 
-/*
-
-1 creo un ciclo che si ripete due volte
-2 al suo interno creo un estrattore di numero random da 1 a 6 per una variabile che sarà il giocatore
-3 stessa cosa per una variabile che sarà il computer
-4 creo un istruzione condizionale in cui confronto i numeri dati
-5 il valore più alto sarà la mia variabile vincitrice
-
-/*
-
-/*Math.ceil(Math.random() * 100 )*/
-
 
 const numeroVincente = [];
 
@@ -60,14 +48,19 @@ for (let i = 0; i < 1; i++){
 
   console.log(numeroRandomUser);
 
+  document.querySelector('.random-numbers-u').innerHTML =
+  `
+  ${ ' il giocatore ha estratto ' + numeroRandomUser} 
+  `;
+  
   const numeroRandomPc = Math.ceil(Math.random() * 100 );
 
-  console.log(numeroRandomPc);
-  
-  document.querySelector('.random-numbers').innerHTML =
+  document.querySelector( '.random-numbers-pc' ).innerHTML = 
   `
-  ${ ' il giocatore ha estratto ' + numeroRandomUser + ' il pc ha estratto ' + numeroRandomPc }
+  ${ ' il pc ha estratto ' + numeroRandomPc }
   `;
+
+  console.log(numeroRandomPc);
 
   if ( numeroRandomPc < numeroRandomUser){
 

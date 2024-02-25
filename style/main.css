@@ -1,0 +1,19 @@
+body{
+  background-color: plum;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 100vh;
+  font-size: 35px;
+}
+
+h2{
+  border: solid white;
+}
+
+h1{
+  color: blueviolet;
+  font-size: 50px;
+}
