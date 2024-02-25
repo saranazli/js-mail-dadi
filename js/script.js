@@ -22,6 +22,8 @@
 6 stampo l'esito della condizione che si verifica relativa alla ail inserita
 */
 
+/*
+
 let mailList = ['pina@live.it', 'stella@live.it', 'gio@live.it', 'stello@live.it'];
 
 let userMail = prompt ('inserisci la tua E-mail');
@@ -32,33 +34,19 @@ for (let i = 0; i = mailList.length; i++){
   
   if (userMail === mailList[i]){
 
-    message = (userMail + ' accedi pure ')
+    message = (userMail + ' accedi pure ');
 
-    console.log(message)
-    console.log(i)
+    console.log(message);
+    console.log(i);
 
   } else {
 
     message = (userMail + ' sbagliato ');
 
-  }
+  };
 };
 
-document.querySelector('h1').innerHTML = `${message}`;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.querySelector('h1').innerHTML = `${message}`; */
 
 // esercizio Dadi
 
@@ -71,3 +59,34 @@ document.querySelector('h1').innerHTML = `${message}`;
 5 il valore più alto sarà la mia variabile vincitrice
 
 */
+
+/*Math.ceil(Math.random() * 100 )*/
+
+const numeroVincente = [];
+
+let messageNum = ' ';
+
+for (let i = 0; i < 1; i++){
+  
+  const numeroRandomUser = Math.ceil(Math.random() * 100 );
+
+  console.log(numeroRandomUser);
+
+  const numeroRandomPc = Math.ceil(Math.random() * 100 );
+
+  console.log(numeroRandomPc); 
+
+  if ( numeroRandomPc < numeroRandomUser){
+
+    messageNum= 'vince il giocatore';
+
+  } else {
+
+    messageNum = 'vince il pc';
+
+  };
+};
+
+console.log(messageNum);
+
+document.getElementById('dadi').innerHTML = `${messageNum}`;
